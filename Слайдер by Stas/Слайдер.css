@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.actual_headline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+.actual {
+    width: 293px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Roboto, "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    color: #527CCD;
+}
+
+.item-places {
+    display: flex;
+}
+
+.indicators {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 40px;
+    width: 100%;
+}
+
+.bar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 0;
+    background: #C8D9FB;
+    border: 1px solid #C8D9FB;
+}
+
+.active {
+    border: 1px solid #527CCD;
+    background-color: #527CCD;
+}
+
+.bar:hover {background: aqua;}
+.bar:active {background: blue;}
+
+.buttons {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btn-back {
+    width: 60px;
+    height: 60px;
+    margin-right: 40px;
+    border: 1px solid #527CCD;
+    background-color: white;
+    color: darkblue;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.btn-next {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #527CCD;
+    background-color: white;
+    color: darkblue;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.slider-img {
+    position: relative;
+    width: 220px;
+    height: 160px;
+    margin: auto;
+}
+
+.container-fluid {
+    margin: 150px 121px auto;
+    padding: 20px 11px;
+}
+
+.slider-wrap {
+    position: relative;
+    width: 70%;
+    height: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    /*overflow-x: auto;*/
+}
+
+.slider-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 126%;
+    display: flex;
+    /*display: grid;
+    grid-template-columns: repeat(5, 1fr);*/
+    gap: 40px;
+    pointer-events: none;
+}
+
+.item {
+    width: 260px;
+    height: 420px;
+    padding: 20px;
+    /*margin-left: 20px;*/
+    display: block;
+    position: relative;
+    border: 1px solid #527CCD;
+    box-sizing: border-box;
+}
+
+.data_text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #527CCD;
+    opacity: 0.6;
+}
+
+.news_headline {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #527CCD;
+}
+
+.news_text {
+    position: absolute;
+    top: 75%;
+    margin-left: auto;
+    margin-right: 20px;
+    text-align: left;
+    font-family: "Roboto", "Arial", sans-serif;
+    color: #527CCD;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Medium.ttf");
+}
+
+.btn-next:active {background-color: cyan;}
+.btn-back:active {background-color: cyan;}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+    .container-fluid {
+        margin: 150px 130px auto;
+        padding: 20px 0;
+    }
+
+    .slider-wrap {
+        width: 105%;
+    }
+
+    .actual_headline {
+        width: 100%;
+        justify-content: start;
+    }
+
+    .item-places {
+        padding-left: 33%;
+    }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
+    .container-fluid {
+        margin: 150px auto;
+        padding: 0 0;
+    }
+
+    .actual_headline {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .item-places {
+        padding-left: 5%;
+    }
+
+    .indicators {
+        margin-right: 25px;
+    }
+
+    .bar {
+        width: 50px;
+    }
+
+    .btn-back {
+        margin-right: 20px;
+    }
+
+    .slider-wrap {
+        width: 75%;
+        height: 425px;
+    }
+
+    .slider-main {
+        width: 254%;
+    }
+}
